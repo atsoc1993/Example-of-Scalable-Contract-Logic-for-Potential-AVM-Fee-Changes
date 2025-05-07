@@ -1,5 +1,5 @@
 from algokit_utils import AlgorandClient, SigningAccount
-from ExampleClient import ExampleContractFactory, ExampleContractClient
+from contract_files.ExampleClient import ExampleContractFactory, ExampleContractClient
 from dotenv import load_dotenv
 from pathlib import Path
 import json
@@ -25,7 +25,7 @@ if os.getenv('app_id'):
     example_client = algorand.client.get_typed_app_client_by_id(
         typed_client=ExampleContractClient,
         app_id=app_id,
-        approval_source_map=json.loads((Path(__file__).parent / 'ExampleContract.approval.puya.map').read_text()),
+        approval_source_map=json.loads((Path(__file__).parent / 'contract_files/ExampleContract.approval.puya.map').read_text()),
         default_sender=signing_account.address,
         default_signer=signing_account.signer
     )

@@ -1,6 +1,6 @@
 from constants import algorand, signing_account, example_client
 from algokit_utils import PaymentParams, AlgoAmount, CommonAppCallParams
-from ExampleClient import ExampleOfMethodWithProperMbrHandlingArgs
+from contract_files.ExampleClient import ExampleOfMethodWithProperMbrHandlingArgs
 
 
 mbr_payment_tx = algorand.create_transaction.payment(
