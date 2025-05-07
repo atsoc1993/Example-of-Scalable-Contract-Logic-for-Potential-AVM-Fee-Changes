@@ -1,0 +1,1425 @@
+{
+  "version": 3,
+  "sources": [
+    "ExampleContract.py"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AASQ;AAAe;;;;;;;;;;AAAf;AAFR;;AAAA;;;AAAA;;;;;;AAAA;;;AAAA;;;;AAAA;;AAKK;;AAAA;AAAA;AAAA;;AAAA;AALL;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAKK;;;AAAA;;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;;AAAA;;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;;;;;AAAA;AAAA;AAAA;AAAA;;AALL;;AAAA;;;;;;;;;AAKA;;;AAsCe;;AAAA;;AAAA;AA5BW;AAAA;AAAA;AAAA;AAkCX;AAlCP;AACA;;;AACkB;AAAA;AAAA;AAAA;AAgCX;AAhCP;AACA;;;AACkB;AAAA;AAAA;AAAA;AA8BX;AA9BP;AACA;;;AACkB;AAAA;AAAA;AAAA;AA4BX;AA5BP;AACA;;;AACkB;AAAA;AAAA;AAAA;AA0BX;AA1BP;AACA;;;AACkB;AAAA;AAAA;AAAA;AAwBX;AAxBP;AACA;;;AACkB;AAAA;AAAA;AAAA;AAsBX;AAtBP;AACA;;;AACkB;AAAA;AAAA;AAAA;AAoBX;AApBP;AAcO;;AAAA;;AAAA;AAuBP;AAAA;;AAAgB;AAChB;;AAAiB;;AACjB;AAAA;;AAAS;AAET;AACa;;;;;;;;AADb;;;AAAA;;;AAAA;AA/BA;AAiB2B;AAAA;AAAA;AAAA;AAAA;AAAsB;AAAtB;AAAZ;AAAf;AAAA;AAAA;",
+  "op_pc_offset": 0,
+  "pc_events": {
+    "1": {
+      "subroutine": "ExampleContract.ExampleContract.__algopy_entrypoint_with_init",
+      "params": {},
+      "block": "main",
+      "stack_in": [],
+      "op": "intcblock 0 1"
+    },
+    "5": {
+      "op": "bytecblock \"counter\" 0x00000000000000000000000000000000"
+    },
+    "32": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "34": {
+      "op": "bnz main_after_if_else@2",
+      "stack_out": []
+    },
+    "37": {
+      "op": "bytec_0 // \"counter\"",
+      "defined_out": [
+        "\"counter\""
+      ],
+      "stack_out": [
+        "\"counter\""
+      ]
+    },
+    "38": {
+      "op": "pushbytes 0x0000000000000000",
+      "defined_out": [
+        "\"counter\"",
+        "0x0000000000000000"
+      ],
+      "stack_out": [
+        "\"counter\"",
+        "0x0000000000000000"
+      ]
+    },
+    "48": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "49": {
+      "block": "main_after_if_else@2",
+      "stack_in": [],
+      "op": "txn NumAppArgs",
+      "defined_out": [
+        "tmp%0#2"
+      ],
+      "stack_out": [
+        "tmp%0#2"
+      ]
+    },
+    "51": {
+      "op": "bz main_bare_routing@6",
+      "stack_out": []
+    },
+    "54": {
+      "op": "pushbytes 0x59f1514d // method \"example_of_method_with_proper_mbr_handling(pay)(uint64,uint64,uint64,uint64,uint64)\"",
+      "defined_out": [
+        "Method(example_of_method_with_proper_mbr_handling(pay)(uint64,uint64,uint64,uint64,uint64))"
+      ],
+      "stack_out": [
+        "Method(example_of_method_with_proper_mbr_handling(pay)(uint64,uint64,uint64,uint64,uint64))"
+      ]
+    },
+    "60": {
+      "op": "txna ApplicationArgs 0",
+      "defined_out": [
+        "Method(example_of_method_with_proper_mbr_handling(pay)(uint64,uint64,uint64,uint64,uint64))",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "Method(example_of_method_with_proper_mbr_handling(pay)(uint64,uint64,uint64,uint64,uint64))",
+        "tmp%2#0"
+      ]
+    },
+    "63": {
+      "op": "match main_example_of_method_with_proper_mbr_handling_route@5",
+      "stack_out": []
+    },
+    "67": {
+      "block": "main_after_if_else@8",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "68": {
+      "op": "return",
+      "stack_out": []
+    },
+    "69": {
+      "block": "main_example_of_method_with_proper_mbr_handling_route@5",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "71": {
+      "op": "!",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "72": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "73": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "75": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "76": {
+      "op": "txn GroupIndex",
+      "defined_out": [
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0"
+      ]
+    },
+    "78": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0",
+        "1"
+      ]
+    },
+    "79": {
+      "op": "-",
+      "defined_out": [
+        "gtxn_idx%0#0"
+      ],
+      "stack_out": [
+        "gtxn_idx%0#0"
+      ]
+    },
+    "80": {
+      "op": "dup",
+      "defined_out": [
+        "gtxn_idx%0#0",
+        "gtxn_idx%0#0 (copy)"
+      ],
+      "stack_out": [
+        "gtxn_idx%0#0",
+        "gtxn_idx%0#0 (copy)"
+      ]
+    },
+    "81": {
+      "op": "gtxns TypeEnum",
+      "defined_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type%0#0"
+      ],
+      "stack_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type%0#0"
+      ]
+    },
+    "83": {
+      "op": "intc_1 // pay",
+      "defined_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type%0#0",
+        "pay"
+      ],
+      "stack_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type%0#0",
+        "pay"
+      ]
+    },
+    "84": {
+      "op": "==",
+      "defined_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type_matches%0#0"
+      ],
+      "stack_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type_matches%0#0"
+      ]
+    },
+    "85": {
+      "error": "transaction type is pay",
+      "op": "assert // transaction type is pay",
+      "stack_out": [
+        "gtxn_idx%0#0"
+      ]
+    },
+    "86": {
+      "callsub": "ExampleContract.ExampleContract.example_of_method_with_proper_mbr_handling",
+      "op": "callsub example_of_method_with_proper_mbr_handling",
+      "defined_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0"
+      ]
+    },
+    "89": {
+      "op": "uncover 4",
+      "stack_out": [
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0",
+        "elements_to_encode%0#0"
+      ]
+    },
+    "91": {
+      "op": "itob",
+      "defined_out": [
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0",
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0",
+        "val_as_bytes%0#0"
+      ]
+    },
+    "92": {
+      "op": "uncover 4",
+      "stack_out": [
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0",
+        "val_as_bytes%0#0",
+        "elements_to_encode%1#0"
+      ]
+    },
+    "94": {
+      "op": "itob",
+      "defined_out": [
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ]
+    },
+    "95": {
+      "op": "uncover 4",
+      "stack_out": [
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "elements_to_encode%2#0"
+      ]
+    },
+    "97": {
+      "op": "itob",
+      "defined_out": [
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0"
+      ]
+    },
+    "98": {
+      "op": "uncover 4",
+      "stack_out": [
+        "elements_to_encode%4#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0",
+        "elements_to_encode%3#0"
+      ]
+    },
+    "100": {
+      "op": "itob",
+      "defined_out": [
+        "elements_to_encode%4#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%4#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0"
+      ]
+    },
+    "101": {
+      "op": "uncover 4",
+      "stack_out": [
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0",
+        "elements_to_encode%4#0"
+      ]
+    },
+    "103": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0",
+        "val_as_bytes%4#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0",
+        "val_as_bytes%4#0"
+      ]
+    },
+    "104": {
+      "op": "uncover 4",
+      "stack_out": [
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0",
+        "val_as_bytes%4#0",
+        "val_as_bytes%0#0"
+      ]
+    },
+    "106": {
+      "op": "uncover 4",
+      "stack_out": [
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0",
+        "val_as_bytes%4#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ]
+    },
+    "108": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%2#0",
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0",
+        "val_as_bytes%4#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0",
+        "val_as_bytes%4#0",
+        "encoded_tuple_buffer%2#0"
+      ]
+    },
+    "109": {
+      "op": "uncover 3",
+      "stack_out": [
+        "val_as_bytes%3#0",
+        "val_as_bytes%4#0",
+        "encoded_tuple_buffer%2#0",
+        "val_as_bytes%2#0"
+      ]
+    },
+    "111": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%3#0",
+        "val_as_bytes%3#0",
+        "val_as_bytes%4#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%3#0",
+        "val_as_bytes%4#0",
+        "encoded_tuple_buffer%3#0"
+      ]
+    },
+    "112": {
+      "op": "uncover 2",
+      "stack_out": [
+        "val_as_bytes%4#0",
+        "encoded_tuple_buffer%3#0",
+        "val_as_bytes%3#0"
+      ]
+    },
+    "114": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%4#0",
+        "val_as_bytes%4#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%4#0",
+        "encoded_tuple_buffer%4#0"
+      ]
+    },
+    "115": {
+      "op": "swap",
+      "stack_out": [
+        "encoded_tuple_buffer%4#0",
+        "val_as_bytes%4#0"
+      ]
+    },
+    "116": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%5#0"
+      ],
+      "stack_out": [
+        "encoded_tuple_buffer%5#0"
+      ]
+    },
+    "117": {
+      "op": "pushbytes 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_tuple_buffer%5#0"
+      ],
+      "stack_out": [
+        "encoded_tuple_buffer%5#0",
+        "0x151f7c75"
+      ]
+    },
+    "123": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_tuple_buffer%5#0"
+      ]
+    },
+    "124": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0"
+      ]
+    },
+    "125": {
+      "op": "log",
+      "stack_out": []
+    },
+    "126": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "127": {
+      "op": "return",
+      "stack_out": []
+    },
+    "128": {
+      "block": "main_bare_routing@6",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%9#0"
+      ]
+    },
+    "130": {
+      "op": "bnz main_after_if_else@8",
+      "stack_out": []
+    },
+    "133": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%10#0"
+      ],
+      "stack_out": [
+        "tmp%10#0"
+      ]
+    },
+    "135": {
+      "op": "!",
+      "defined_out": [
+        "tmp%11#0"
+      ],
+      "stack_out": [
+        "tmp%11#0"
+      ]
+    },
+    "136": {
+      "error": "can only call when creating",
+      "op": "assert // can only call when creating",
+      "stack_out": []
+    },
+    "137": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "138": {
+      "op": "return",
+      "stack_out": []
+    },
+    "139": {
+      "subroutine": "ExampleContract.ExampleContract.example_of_method_with_proper_mbr_handling",
+      "params": {
+        "mbr_payment#0": "uint64"
+      },
+      "block": "example_of_method_with_proper_mbr_handling",
+      "stack_in": [],
+      "op": "proto 1 5"
+    },
+    "142": {
+      "op": "global CurrentApplicationAddress",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "144": {
+      "op": "acct_params_get AcctMinBalance",
+      "defined_out": [
+        "check%0#0",
+        "pre_mbr#0"
+      ],
+      "stack_out": [
+        "pre_mbr#0",
+        "check%0#0"
+      ]
+    },
+    "146": {
+      "error": "account funded",
+      "op": "assert // account funded",
+      "stack_out": [
+        "pre_mbr#0"
+      ]
+    },
+    "147": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "pre_mbr#0"
+      ],
+      "stack_out": [
+        "pre_mbr#0",
+        "0"
+      ]
+    },
+    "148": {
+      "op": "bytec_0 // \"counter\"",
+      "defined_out": [
+        "\"counter\"",
+        "0",
+        "pre_mbr#0"
+      ],
+      "stack_out": [
+        "pre_mbr#0",
+        "0",
+        "\"counter\""
+      ]
+    },
+    "149": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "pre_mbr#0"
+      ],
+      "stack_out": [
+        "pre_mbr#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "150": {
+      "error": "check self.counter exists",
+      "op": "assert // check self.counter exists",
+      "stack_out": [
+        "pre_mbr#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "151": {
+      "op": "bytec_1 // 0x00000000000000000000000000000000",
+      "defined_out": [
+        "0x00000000000000000000000000000000",
+        "maybe_value%0#0",
+        "pre_mbr#0"
+      ],
+      "stack_out": [
+        "pre_mbr#0",
+        "maybe_value%0#0",
+        "0x00000000000000000000000000000000"
+      ]
+    },
+    "152": {
+      "op": "box_put",
+      "stack_out": [
+        "pre_mbr#0"
+      ]
+    },
+    "153": {
+      "callsub": "ExampleContract.ExampleContract.increment_counter",
+      "op": "callsub increment_counter"
+    },
+    "156": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "pre_mbr#0",
+        "0"
+      ]
+    },
+    "157": {
+      "op": "bytec_0 // \"counter\"",
+      "stack_out": [
+        "pre_mbr#0",
+        "0",
+        "\"counter\""
+      ]
+    },
+    "158": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%1#0",
+        "pre_mbr#0"
+      ],
+      "stack_out": [
+        "pre_mbr#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "159": {
+      "error": "check self.counter exists",
+      "op": "assert // check self.counter exists",
+      "stack_out": [
+        "pre_mbr#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "160": {
+      "op": "bytec_1 // 0x00000000000000000000000000000000",
+      "stack_out": [
+        "pre_mbr#0",
+        "maybe_value%1#0",
+        "0x00000000000000000000000000000000"
+      ]
+    },
+    "161": {
+      "op": "box_put",
+      "stack_out": [
+        "pre_mbr#0"
+      ]
+    },
+    "162": {
+      "callsub": "ExampleContract.ExampleContract.increment_counter",
+      "op": "callsub increment_counter"
+    },
+    "165": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "pre_mbr#0",
+        "0"
+      ]
+    },
+    "166": {
+      "op": "bytec_0 // \"counter\"",
+      "stack_out": [
+        "pre_mbr#0",
+        "0",
+        "\"counter\""
+      ]
+    },
+    "167": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%2#0",
+        "maybe_value%2#0",
+        "pre_mbr#0"
+      ],
+      "stack_out": [
+        "pre_mbr#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "168": {
+      "error": "check self.counter exists",
+      "op": "assert // check self.counter exists",
+      "stack_out": [
+        "pre_mbr#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "169": {
+      "op": "bytec_1 // 0x00000000000000000000000000000000",
+      "stack_out": [
+        "pre_mbr#0",
+        "maybe_value%2#0",
+        "0x00000000000000000000000000000000"
+      ]
+    },
+    "170": {
+      "op": "box_put",
+      "stack_out": [
+        "pre_mbr#0"
+      ]
+    },
+    "171": {
+      "callsub": "ExampleContract.ExampleContract.increment_counter",
+      "op": "callsub increment_counter"
+    },
+    "174": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "pre_mbr#0",
+        "0"
+      ]
+    },
+    "175": {
+      "op": "bytec_0 // \"counter\"",
+      "stack_out": [
+        "pre_mbr#0",
+        "0",
+        "\"counter\""
+      ]
+    },
+    "176": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%3#0",
+        "maybe_value%3#0",
+        "pre_mbr#0"
+      ],
+      "stack_out": [
+        "pre_mbr#0",
+        "maybe_value%3#0",
+        "maybe_exists%3#0"
+      ]
+    },
+    "177": {
+      "error": "check self.counter exists",
+      "op": "assert // check self.counter exists",
+      "stack_out": [
+        "pre_mbr#0",
+        "maybe_value%3#0"
+      ]
+    },
+    "178": {
+      "op": "bytec_1 // 0x00000000000000000000000000000000",
+      "stack_out": [
+        "pre_mbr#0",
+        "maybe_value%3#0",
+        "0x00000000000000000000000000000000"
+      ]
+    },
+    "179": {
+      "op": "box_put",
+      "stack_out": [
+        "pre_mbr#0"
+      ]
+    },
+    "180": {
+      "callsub": "ExampleContract.ExampleContract.increment_counter",
+      "op": "callsub increment_counter"
+    },
+    "183": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "pre_mbr#0",
+        "0"
+      ]
+    },
+    "184": {
+      "op": "bytec_0 // \"counter\"",
+      "stack_out": [
+        "pre_mbr#0",
+        "0",
+        "\"counter\""
+      ]
+    },
+    "185": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%4#0",
+        "maybe_value%4#0",
+        "pre_mbr#0"
+      ],
+      "stack_out": [
+        "pre_mbr#0",
+        "maybe_value%4#0",
+        "maybe_exists%4#0"
+      ]
+    },
+    "186": {
+      "error": "check self.counter exists",
+      "op": "assert // check self.counter exists",
+      "stack_out": [
+        "pre_mbr#0",
+        "maybe_value%4#0"
+      ]
+    },
+    "187": {
+      "op": "bytec_1 // 0x00000000000000000000000000000000",
+      "stack_out": [
+        "pre_mbr#0",
+        "maybe_value%4#0",
+        "0x00000000000000000000000000000000"
+      ]
+    },
+    "188": {
+      "op": "box_put",
+      "stack_out": [
+        "pre_mbr#0"
+      ]
+    },
+    "189": {
+      "callsub": "ExampleContract.ExampleContract.increment_counter",
+      "op": "callsub increment_counter"
+    },
+    "192": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "pre_mbr#0",
+        "0"
+      ]
+    },
+    "193": {
+      "op": "bytec_0 // \"counter\"",
+      "stack_out": [
+        "pre_mbr#0",
+        "0",
+        "\"counter\""
+      ]
+    },
+    "194": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%5#0",
+        "maybe_value%5#0",
+        "pre_mbr#0"
+      ],
+      "stack_out": [
+        "pre_mbr#0",
+        "maybe_value%5#0",
+        "maybe_exists%5#0"
+      ]
+    },
+    "195": {
+      "error": "check self.counter exists",
+      "op": "assert // check self.counter exists",
+      "stack_out": [
+        "pre_mbr#0",
+        "maybe_value%5#0"
+      ]
+    },
+    "196": {
+      "op": "bytec_1 // 0x00000000000000000000000000000000",
+      "stack_out": [
+        "pre_mbr#0",
+        "maybe_value%5#0",
+        "0x00000000000000000000000000000000"
+      ]
+    },
+    "197": {
+      "op": "box_put",
+      "stack_out": [
+        "pre_mbr#0"
+      ]
+    },
+    "198": {
+      "callsub": "ExampleContract.ExampleContract.increment_counter",
+      "op": "callsub increment_counter"
+    },
+    "201": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "pre_mbr#0",
+        "0"
+      ]
+    },
+    "202": {
+      "op": "bytec_0 // \"counter\"",
+      "stack_out": [
+        "pre_mbr#0",
+        "0",
+        "\"counter\""
+      ]
+    },
+    "203": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%6#0",
+        "maybe_value%6#0",
+        "pre_mbr#0"
+      ],
+      "stack_out": [
+        "pre_mbr#0",
+        "maybe_value%6#0",
+        "maybe_exists%6#0"
+      ]
+    },
+    "204": {
+      "error": "check self.counter exists",
+      "op": "assert // check self.counter exists",
+      "stack_out": [
+        "pre_mbr#0",
+        "maybe_value%6#0"
+      ]
+    },
+    "205": {
+      "op": "bytec_1 // 0x00000000000000000000000000000000",
+      "stack_out": [
+        "pre_mbr#0",
+        "maybe_value%6#0",
+        "0x00000000000000000000000000000000"
+      ]
+    },
+    "206": {
+      "op": "box_put",
+      "stack_out": [
+        "pre_mbr#0"
+      ]
+    },
+    "207": {
+      "callsub": "ExampleContract.ExampleContract.increment_counter",
+      "op": "callsub increment_counter"
+    },
+    "210": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "pre_mbr#0",
+        "0"
+      ]
+    },
+    "211": {
+      "op": "bytec_0 // \"counter\"",
+      "stack_out": [
+        "pre_mbr#0",
+        "0",
+        "\"counter\""
+      ]
+    },
+    "212": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%7#0",
+        "maybe_value%7#0",
+        "pre_mbr#0"
+      ],
+      "stack_out": [
+        "pre_mbr#0",
+        "maybe_value%7#0",
+        "maybe_exists%7#0"
+      ]
+    },
+    "213": {
+      "error": "check self.counter exists",
+      "op": "assert // check self.counter exists",
+      "stack_out": [
+        "pre_mbr#0",
+        "maybe_value%7#0"
+      ]
+    },
+    "214": {
+      "op": "bytec_1 // 0x00000000000000000000000000000000",
+      "stack_out": [
+        "pre_mbr#0",
+        "maybe_value%7#0",
+        "0x00000000000000000000000000000000"
+      ]
+    },
+    "215": {
+      "op": "box_put",
+      "stack_out": [
+        "pre_mbr#0"
+      ]
+    },
+    "216": {
+      "op": "global CurrentApplicationAddress",
+      "stack_out": [
+        "pre_mbr#0",
+        "tmp%0#0"
+      ]
+    },
+    "218": {
+      "op": "acct_params_get AcctMinBalance",
+      "defined_out": [
+        "check%0#0",
+        "post_mbr#0",
+        "pre_mbr#0"
+      ],
+      "stack_out": [
+        "pre_mbr#0",
+        "post_mbr#0",
+        "check%0#0"
+      ]
+    },
+    "220": {
+      "error": "account funded",
+      "op": "assert // account funded",
+      "stack_out": [
+        "pre_mbr#0",
+        "post_mbr#0"
+      ]
+    },
+    "221": {
+      "op": "dup",
+      "defined_out": [
+        "post_mbr#0",
+        "post_mbr#0 (copy)",
+        "pre_mbr#0"
+      ],
+      "stack_out": [
+        "pre_mbr#0",
+        "post_mbr#0",
+        "post_mbr#0 (copy)"
+      ]
+    },
+    "222": {
+      "op": "dig 2",
+      "defined_out": [
+        "post_mbr#0",
+        "post_mbr#0 (copy)",
+        "pre_mbr#0",
+        "pre_mbr#0 (copy)"
+      ],
+      "stack_out": [
+        "pre_mbr#0",
+        "post_mbr#0",
+        "post_mbr#0 (copy)",
+        "pre_mbr#0 (copy)"
+      ]
+    },
+    "224": {
+      "op": "-",
+      "defined_out": [
+        "post_mbr#0",
+        "pre_mbr#0",
+        "pre_post_diff#1"
+      ],
+      "stack_out": [
+        "pre_mbr#0",
+        "post_mbr#0",
+        "pre_post_diff#1"
+      ]
+    },
+    "225": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "mbr_payment#0 (copy)",
+        "post_mbr#0",
+        "pre_mbr#0",
+        "pre_post_diff#1"
+      ],
+      "stack_out": [
+        "pre_mbr#0",
+        "post_mbr#0",
+        "pre_post_diff#1",
+        "mbr_payment#0 (copy)"
+      ]
+    },
+    "227": {
+      "op": "gtxns Amount",
+      "defined_out": [
+        "payment_amount#1",
+        "post_mbr#0",
+        "pre_mbr#0",
+        "pre_post_diff#1"
+      ],
+      "stack_out": [
+        "pre_mbr#0",
+        "post_mbr#0",
+        "pre_post_diff#1",
+        "payment_amount#1"
+      ]
+    },
+    "229": {
+      "op": "dup",
+      "defined_out": [
+        "payment_amount#1",
+        "payment_amount#1 (copy)",
+        "post_mbr#0",
+        "pre_mbr#0",
+        "pre_post_diff#1"
+      ],
+      "stack_out": [
+        "pre_mbr#0",
+        "post_mbr#0",
+        "pre_post_diff#1",
+        "payment_amount#1",
+        "payment_amount#1 (copy)"
+      ]
+    },
+    "230": {
+      "op": "dig 2",
+      "defined_out": [
+        "payment_amount#1",
+        "payment_amount#1 (copy)",
+        "post_mbr#0",
+        "pre_mbr#0",
+        "pre_post_diff#1",
+        "pre_post_diff#1 (copy)"
+      ],
+      "stack_out": [
+        "pre_mbr#0",
+        "post_mbr#0",
+        "pre_post_diff#1",
+        "payment_amount#1",
+        "payment_amount#1 (copy)",
+        "pre_post_diff#1 (copy)"
+      ]
+    },
+    "232": {
+      "op": "-",
+      "defined_out": [
+        "excess#0",
+        "payment_amount#1",
+        "post_mbr#0",
+        "pre_mbr#0",
+        "pre_post_diff#1"
+      ],
+      "stack_out": [
+        "pre_mbr#0",
+        "post_mbr#0",
+        "pre_post_diff#1",
+        "payment_amount#1",
+        "excess#0"
+      ]
+    },
+    "233": {
+      "op": "itxn_begin"
+    },
+    "234": {
+      "op": "txn Sender",
+      "defined_out": [
+        "excess#0",
+        "inner_txn_params%0%%param_Receiver_idx_0#0",
+        "payment_amount#1",
+        "post_mbr#0",
+        "pre_mbr#0",
+        "pre_post_diff#1"
+      ],
+      "stack_out": [
+        "pre_mbr#0",
+        "post_mbr#0",
+        "pre_post_diff#1",
+        "payment_amount#1",
+        "excess#0",
+        "inner_txn_params%0%%param_Receiver_idx_0#0"
+      ]
+    },
+    "236": {
+      "op": "dig 1",
+      "defined_out": [
+        "excess#0",
+        "excess#0 (copy)",
+        "inner_txn_params%0%%param_Receiver_idx_0#0",
+        "payment_amount#1",
+        "post_mbr#0",
+        "pre_mbr#0",
+        "pre_post_diff#1"
+      ],
+      "stack_out": [
+        "pre_mbr#0",
+        "post_mbr#0",
+        "pre_post_diff#1",
+        "payment_amount#1",
+        "excess#0",
+        "inner_txn_params%0%%param_Receiver_idx_0#0",
+        "excess#0 (copy)"
+      ]
+    },
+    "238": {
+      "op": "itxn_field Amount",
+      "stack_out": [
+        "pre_mbr#0",
+        "post_mbr#0",
+        "pre_post_diff#1",
+        "payment_amount#1",
+        "excess#0",
+        "inner_txn_params%0%%param_Receiver_idx_0#0"
+      ]
+    },
+    "240": {
+      "op": "itxn_field Receiver",
+      "stack_out": [
+        "pre_mbr#0",
+        "post_mbr#0",
+        "pre_post_diff#1",
+        "payment_amount#1",
+        "excess#0"
+      ]
+    },
+    "242": {
+      "op": "intc_1 // pay",
+      "defined_out": [
+        "excess#0",
+        "pay",
+        "payment_amount#1",
+        "post_mbr#0",
+        "pre_mbr#0",
+        "pre_post_diff#1"
+      ],
+      "stack_out": [
+        "pre_mbr#0",
+        "post_mbr#0",
+        "pre_post_diff#1",
+        "payment_amount#1",
+        "excess#0",
+        "pay"
+      ]
+    },
+    "243": {
+      "op": "itxn_field TypeEnum",
+      "stack_out": [
+        "pre_mbr#0",
+        "post_mbr#0",
+        "pre_post_diff#1",
+        "payment_amount#1",
+        "excess#0"
+      ]
+    },
+    "245": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "pre_mbr#0",
+        "post_mbr#0",
+        "pre_post_diff#1",
+        "payment_amount#1",
+        "excess#0",
+        "0"
+      ]
+    },
+    "246": {
+      "op": "itxn_field Fee",
+      "stack_out": [
+        "pre_mbr#0",
+        "post_mbr#0",
+        "pre_post_diff#1",
+        "payment_amount#1",
+        "excess#0"
+      ]
+    },
+    "248": {
+      "op": "itxn_submit"
+    },
+    "249": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "250": {
+      "subroutine": "ExampleContract.ExampleContract.increment_counter",
+      "params": {},
+      "block": "increment_counter",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "251": {
+      "op": "bytec_0 // \"counter\"",
+      "defined_out": [
+        "\"counter\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"counter\""
+      ]
+    },
+    "252": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "253": {
+      "error": "check self.counter exists",
+      "op": "assert // check self.counter exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "254": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "255": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "1"
+      ]
+    },
+    "256": {
+      "op": "+",
+      "defined_out": [
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0"
+      ]
+    },
+    "257": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%0#0"
+      ]
+    },
+    "258": {
+      "op": "bytec_0 // \"counter\"",
+      "stack_out": [
+        "val_as_bytes%0#0",
+        "\"counter\""
+      ]
+    },
+    "259": {
+      "op": "swap",
+      "stack_out": [
+        "\"counter\"",
+        "val_as_bytes%0#0"
+      ]
+    },
+    "260": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "261": {
+      "retsub": true,
+      "op": "retsub"
+    }
+  }
+}

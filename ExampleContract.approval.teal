@@ -1,0 +1,308 @@
+#pragma version 10
+#pragma typetrack false
+
+// ExampleContract.ExampleContract.__algopy_entrypoint_with_init() -> uint64:
+main:
+    intcblock 0 1
+    bytecblock "counter" 0x00000000000000000000000000000000
+    txn ApplicationID
+    bnz main_after_if_else@2
+    // ExampleContract.py:10
+    // self.counter = arc4.UInt64(0)
+    bytec_0 // "counter"
+    pushbytes 0x0000000000000000
+    app_global_put
+
+main_after_if_else@2:
+    // ExampleContract.py:8
+    // class ExampleContract(ARC4Contract):
+    txn NumAppArgs
+    bz main_bare_routing@6
+    pushbytes 0x59f1514d // method "example_of_method_with_proper_mbr_handling(pay)(uint64,uint64,uint64,uint64,uint64)"
+    txna ApplicationArgs 0
+    match main_example_of_method_with_proper_mbr_handling_route@5
+
+main_after_if_else@8:
+    // ExampleContract.py:8
+    // class ExampleContract(ARC4Contract):
+    intc_0 // 0
+    return
+
+main_example_of_method_with_proper_mbr_handling_route@5:
+    // ExampleContract.py:13
+    // @abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // ExampleContract.py:8
+    // class ExampleContract(ARC4Contract):
+    txn GroupIndex
+    intc_1 // 1
+    -
+    dup
+    gtxns TypeEnum
+    intc_1 // pay
+    ==
+    assert // transaction type is pay
+    // ExampleContract.py:13
+    // @abimethod
+    callsub example_of_method_with_proper_mbr_handling
+    uncover 4
+    itob
+    uncover 4
+    itob
+    uncover 4
+    itob
+    uncover 4
+    itob
+    uncover 4
+    itob
+    uncover 4
+    uncover 4
+    concat
+    uncover 3
+    concat
+    uncover 2
+    concat
+    swap
+    concat
+    pushbytes 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_bare_routing@6:
+    // ExampleContract.py:8
+    // class ExampleContract(ARC4Contract):
+    txn OnCompletion
+    bnz main_after_if_else@8
+    txn ApplicationID
+    !
+    assert // can only call when creating
+    intc_1 // 1
+    return
+
+
+// ExampleContract.ExampleContract.example_of_method_with_proper_mbr_handling(mbr_payment: uint64) -> uint64, uint64, uint64, uint64, uint64:
+example_of_method_with_proper_mbr_handling:
+    // ExampleContract.py:13-17
+    // @abimethod
+    // def example_of_method_with_proper_mbr_handling(
+    //     self,
+    //     mbr_payment: gtxn.PaymentTransaction
+    // ) -> tuple[UInt64, UInt64, UInt64, UInt64, UInt64]:
+    proto 1 5
+    // ExampleContract.py:51
+    // return Global.current_application_address.min_balance
+    global CurrentApplicationAddress
+    acct_params_get AcctMinBalance
+    assert // account funded
+    // ExampleContract.py:23
+    // self.some_box_map[self.counter] = example_struct.copy()
+    intc_0 // 0
+    bytec_0 // "counter"
+    app_global_get_ex
+    assert // check self.counter exists
+    // ExampleContract.py:57-60
+    // return ExampleStruct(
+    //     value_1=value_1,
+    //     value_2=value_2
+    // )
+    bytec_1 // 0x00000000000000000000000000000000
+    // ExampleContract.py:23
+    // self.some_box_map[self.counter] = example_struct.copy()
+    box_put
+    // ExampleContract.py:24
+    // self.increment_counter()
+    callsub increment_counter
+    // ExampleContract.py:25
+    // self.some_box_map[self.counter] = example_struct.copy()
+    intc_0 // 0
+    bytec_0 // "counter"
+    app_global_get_ex
+    assert // check self.counter exists
+    // ExampleContract.py:57-60
+    // return ExampleStruct(
+    //     value_1=value_1,
+    //     value_2=value_2
+    // )
+    bytec_1 // 0x00000000000000000000000000000000
+    // ExampleContract.py:25
+    // self.some_box_map[self.counter] = example_struct.copy()
+    box_put
+    // ExampleContract.py:26
+    // self.increment_counter()
+    callsub increment_counter
+    // ExampleContract.py:27
+    // self.some_box_map[self.counter] = example_struct.copy()
+    intc_0 // 0
+    bytec_0 // "counter"
+    app_global_get_ex
+    assert // check self.counter exists
+    // ExampleContract.py:57-60
+    // return ExampleStruct(
+    //     value_1=value_1,
+    //     value_2=value_2
+    // )
+    bytec_1 // 0x00000000000000000000000000000000
+    // ExampleContract.py:27
+    // self.some_box_map[self.counter] = example_struct.copy()
+    box_put
+    // ExampleContract.py:28
+    // self.increment_counter()
+    callsub increment_counter
+    // ExampleContract.py:29
+    // self.some_box_map[self.counter] = example_struct.copy()
+    intc_0 // 0
+    bytec_0 // "counter"
+    app_global_get_ex
+    assert // check self.counter exists
+    // ExampleContract.py:57-60
+    // return ExampleStruct(
+    //     value_1=value_1,
+    //     value_2=value_2
+    // )
+    bytec_1 // 0x00000000000000000000000000000000
+    // ExampleContract.py:29
+    // self.some_box_map[self.counter] = example_struct.copy()
+    box_put
+    // ExampleContract.py:30
+    // self.increment_counter()
+    callsub increment_counter
+    // ExampleContract.py:31
+    // self.some_box_map[self.counter] = example_struct.copy()
+    intc_0 // 0
+    bytec_0 // "counter"
+    app_global_get_ex
+    assert // check self.counter exists
+    // ExampleContract.py:57-60
+    // return ExampleStruct(
+    //     value_1=value_1,
+    //     value_2=value_2
+    // )
+    bytec_1 // 0x00000000000000000000000000000000
+    // ExampleContract.py:31
+    // self.some_box_map[self.counter] = example_struct.copy()
+    box_put
+    // ExampleContract.py:32
+    // self.increment_counter()
+    callsub increment_counter
+    // ExampleContract.py:33
+    // self.some_box_map[self.counter] = example_struct.copy()
+    intc_0 // 0
+    bytec_0 // "counter"
+    app_global_get_ex
+    assert // check self.counter exists
+    // ExampleContract.py:57-60
+    // return ExampleStruct(
+    //     value_1=value_1,
+    //     value_2=value_2
+    // )
+    bytec_1 // 0x00000000000000000000000000000000
+    // ExampleContract.py:33
+    // self.some_box_map[self.counter] = example_struct.copy()
+    box_put
+    // ExampleContract.py:34
+    // self.increment_counter()
+    callsub increment_counter
+    // ExampleContract.py:35
+    // self.some_box_map[self.counter] = example_struct.copy()
+    intc_0 // 0
+    bytec_0 // "counter"
+    app_global_get_ex
+    assert // check self.counter exists
+    // ExampleContract.py:57-60
+    // return ExampleStruct(
+    //     value_1=value_1,
+    //     value_2=value_2
+    // )
+    bytec_1 // 0x00000000000000000000000000000000
+    // ExampleContract.py:35
+    // self.some_box_map[self.counter] = example_struct.copy()
+    box_put
+    // ExampleContract.py:36
+    // self.increment_counter()
+    callsub increment_counter
+    // ExampleContract.py:37
+    // self.some_box_map[self.counter] = example_struct.copy()
+    intc_0 // 0
+    bytec_0 // "counter"
+    app_global_get_ex
+    assert // check self.counter exists
+    // ExampleContract.py:57-60
+    // return ExampleStruct(
+    //     value_1=value_1,
+    //     value_2=value_2
+    // )
+    bytec_1 // 0x00000000000000000000000000000000
+    // ExampleContract.py:37
+    // self.some_box_map[self.counter] = example_struct.copy()
+    box_put
+    // ExampleContract.py:51
+    // return Global.current_application_address.min_balance
+    global CurrentApplicationAddress
+    acct_params_get AcctMinBalance
+    assert // account funded
+    // ExampleContract.py:74
+    // pre_post_diff = post_mbr - pre_mbr
+    dup
+    dig 2
+    -
+    // ExampleContract.py:75
+    // payment_amount = mbr_payment.amount
+    frame_dig -1
+    gtxns Amount
+    // ExampleContract.py:76
+    // excess = payment_amount - pre_post_diff
+    dup
+    dig 2
+    -
+    // ExampleContract.py:78-81
+    // itxn.Payment(
+    //     receiver=Txn.sender,
+    //     amount=excess
+    // ).submit()
+    itxn_begin
+    // ExampleContract.py:79
+    // receiver=Txn.sender,
+    txn Sender
+    dig 1
+    itxn_field Amount
+    itxn_field Receiver
+    // ExampleContract.py:78
+    // itxn.Payment(
+    intc_1 // pay
+    itxn_field TypeEnum
+    intc_0 // 0
+    itxn_field Fee
+    // ExampleContract.py:78-81
+    // itxn.Payment(
+    //     receiver=Txn.sender,
+    //     amount=excess
+    // ).submit()
+    itxn_submit
+    // ExampleContract.py:47
+    // return pre_mbr, post_mbr, pre_post_diff, payment_amount, amount_refunded
+    retsub
+
+
+// ExampleContract.ExampleContract.increment_counter() -> void:
+increment_counter:
+    // ExampleContract.py:64
+    // self.counter = arc4.UInt64(self.counter.native + 1)
+    intc_0 // 0
+    bytec_0 // "counter"
+    app_global_get_ex
+    assert // check self.counter exists
+    btoi
+    intc_1 // 1
+    +
+    itob
+    bytec_0 // "counter"
+    swap
+    app_global_put
+    retsub
