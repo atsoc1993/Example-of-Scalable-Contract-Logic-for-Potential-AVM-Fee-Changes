@@ -12,7 +12,7 @@
 
 - Refund the user through a payment inner transaction with this amount.
 
-*Note: If you absolutely *must* hardcode transaction fees for whatever reason, use the global min_fee op, don’t hardcode 1000 for fee amounts although this is the fee for all inner transactions!*
+*Note: If you absolutely *must* hardcode inner transaction fees for whatever reason, use the global min_fee op, don’t hardcode 1000 for fee amounts although this is the fee for all inner transactions!*
 
 ## For Front-ends (in respect to transaction fees) See file # 2:
 - Take advantage of max_fee (not extra fee) parameter available in send methods on application clients , it will deduct only the necessary amount of Algo from the users balance for transaction fees, 
